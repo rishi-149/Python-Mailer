@@ -1,5 +1,5 @@
 import smtplib
-from email.mime.txt import MIMEtext  # MIMEText is a class that represents the text of the email
+from email.mime.text import MIMEtext  # MIMEText is a class that represents the text of the email
 from email.mime.multipart import MIMEMultipart  # MIMEMultipart is a class that represents the email message itself
 import os
 
