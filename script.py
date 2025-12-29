@@ -1,5 +1,5 @@
 import smtplib
-from email.mime.text import MIMEtext  # MIMEText is a class that represents the text of the email
+from email.mime.text import MIMEText  # MIMEText is a class that represents the text of the email
 from email.mime.multipart import MIMEMultipart  # MIMEMultipart is a class that represents the email message itself
 import os
 
@@ -17,7 +17,7 @@ def send_mail(workflow_name, repo_name, workflow_run_id):
     msg['From'] = sender_email
     msg['To'] = receiver_email
     msg['Subject'] = subject
-    msg.attach(MIMEtext(body, 'Plain'))
+    msg.attach(MIMEText(body, 'Plain'))
 
     try:
         server = smtplib.SMTP('smtp.gmail.com',587)
